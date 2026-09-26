@@ -39,3 +39,16 @@ This document records key technical, structural, and architectural decisions mad
 * **Chosen Approach:** Use Prisma transactions (`prisma.$transaction`) within a unified `InventoryService`.
 * **Reason:** Guarantees atomic updates (stock change + ledger entry + status update) and single source of truth for stock rules.
 * **Status:** Implemented.
+
+---
+
+### DEC-004 | 2026-09-26 | Corporate Git Branching Strategy (Git Flow / Enterprise Standard)
+* **Stage:** Repository Governance
+* **Decision:** Adopt Enterprise Git Flow branching architecture with protected `main` branch, integration `develop` branch, and topic `feature/*` branches.
+* **Context:** Real-world software engineering standards in corporate tech environments.
+* **Chosen Approach:**
+  - `main`: Production-ready releases (Protected branch).
+  - `develop`: Integration branch where all active features are merged and tested.
+  - `feature/*`: Short-lived feature topic branches created off `develop` and merged via Pull Requests.
+* **Reason:** Aligns with standard software development lifecycles (SDLC) in professional tech companies.
+* **Status:** Implemented.
